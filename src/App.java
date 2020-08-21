@@ -5,18 +5,12 @@ public class App {
         System.out.println("ブラックジャックへようこそ");
         System.out.println("ゲームを開始します。");
         Random rand = new Random();
-        int random_number = rand.nextInt(4);
-        System.out.println(random_number);
-        String mark[];
-        mark = new String[4];
-        mark[0] = "スペード";
-        mark[1] = "ハート";
-        mark[2] = "クラブ";
-        mark[3] = "ダイヤ";
-        System.out.println(mark[random_number]);
-        Random ran = new Random();
-        int random_kazu = ran.nextInt(13);
-        System.out.println(random_kazu +1);
-        System.out.println("あなたの引いたカードは" +mark[random_number] +"の" +(random_kazu +1) +"です。");
+        int mark_id = rand.nextInt(4);
+        System.out.println(mark_id);
+        String mark [] = {"スペード", "ハート", "クラブ", "ダイヤ"};
+        System.out.println(mark[mark_id]);
+        int card_id = rand.nextInt(13);
+        System.out.println(card_id +1);
+        System.out.println("あなたの引いたカードは" +mark[mark_id] +"の" +(card_id +1) +"です。");
     }
 }
